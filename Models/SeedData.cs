@@ -87,26 +87,27 @@ namespace FinalProject.Models
                 context.AddRange(Tournaments);
 
                 List<PlayerTournament> Enlisted = new List<PlayerTournament> {
-                    new PlayerTournament {PlayerID = 1, TournamentID = 28},
-                    new PlayerTournament {PlayerID = 2, TournamentID = 16},
-                    new PlayerTournament {PlayerID = 4, TournamentID = 8},
-                    new PlayerTournament {PlayerID = 1, TournamentID = 4},
-                    new PlayerTournament {PlayerID = 6, TournamentID = 4},
-                    new PlayerTournament {PlayerID = 9, TournamentID = 4},
-                    new PlayerTournament {PlayerID = 11, TournamentID = 4},
-                    new PlayerTournament {PlayerID = 12, TournamentID = 6},
-                    new PlayerTournament {PlayerID = 13, TournamentID = 6},
+                    new PlayerTournament {Player = Players[0], Tournament = Tournaments[28]},
+                    new PlayerTournament {Player = Players[2], Tournament = Tournaments[16]},
+                    new PlayerTournament {Player = Players[4], Tournament = Tournaments[8]},
+                    new PlayerTournament {Player = Players[0], Tournament = Tournaments[4]},
+                    new PlayerTournament {Player = Players[6], Tournament = Tournaments[4]},
+                    new PlayerTournament {Player = Players[9], Tournament = Tournaments[4]},
+                    new PlayerTournament {Player = Players[11], Tournament = Tournaments[4]},
+                    new PlayerTournament {Player = Players[12], Tournament = Tournaments[6]},
+                    new PlayerTournament {Player = Players[13], Tournament = Tournaments[6]},
 
-                    new PlayerTournament {PlayerID = 2, TournamentID = 28},
-                    new PlayerTournament {PlayerID = 6, TournamentID = 28},
-                    new PlayerTournament {PlayerID = 14, TournamentID = 4},
-                    new PlayerTournament {PlayerID = 15, TournamentID = 11},
-                    new PlayerTournament {PlayerID = 3, TournamentID = 11},
-                    new PlayerTournament {PlayerID = 5, TournamentID = 13},
-                    new PlayerTournament {PlayerID = 18, TournamentID = 1},
-                    new PlayerTournament {PlayerID = 20, TournamentID = 1},
+                    new PlayerTournament {Player = Players[2], Tournament = Tournaments[28]},
+                    new PlayerTournament {Player = Players[6], Tournament = Tournaments[28]},
+                    new PlayerTournament {Player = Players[14], Tournament = Tournaments[4]},
+                    new PlayerTournament {Player = Players[15], Tournament = Tournaments[11]},
+                    new PlayerTournament {Player = Players[3], Tournament = Tournaments[11]},
+                    new PlayerTournament {Player = Players[5], Tournament = Tournaments[13]},
+                    new PlayerTournament {Player = Players[18], Tournament = Tournaments[1]},
+                    new PlayerTournament {Player = Players[20], Tournament = Tournaments[1]},
 
                     // Initial Seed Count: 19
+                    // new PlayerTournament {Player = Players[0], Tournament = Tournaments[5]},
 
                 };
                 context.AddRange(Enlisted);
