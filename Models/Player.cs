@@ -8,15 +8,16 @@ namespace FinalProject.Models
     {
         public int PlayerID {get; set;} // PK
 
+        
+        [Display(Name = "User Name")]
         [Required]
-        [Display (Name = "User Name")]
         public string UserName {get; set;}
 
-        [Display (Name = "Player Bio")]
+        [Display(Name = "Player Bio")]
         public string PlayerBio {get; set;}
 
         // Note: This property replaces GamesAttached in my original concept design.
-        [Display (Name = "Favorite Game")]
+        [Display(Name = "Favorite Game")]
         public string FavoriteGame {get; set;}
 
         // Navigation Property. Players can enroll in MANY PlayerTournaments

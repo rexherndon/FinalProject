@@ -8,20 +8,24 @@ namespace FinalProject.Models
     {
         public int TournamentID {get; set;} // PK
 
-        [Required]
+        
         [Display(Name = "Tournament Name")]
+        [Required]
         public string TournamentName {get; set;}
 
-        [Required]
+        
         [Display(Name = "Tournament Game")]
+        [Required]
         public string TournamentGame {get; set;}
 
-        [Required]
+        
         [Display(Name = "Start Date")]
+        [Required]
         public DateTime StartDate {get; set;}
 
-        [Required]
+        
         [Display(Name = "Tournament Details")]
+        [Required]
         public string TournamentDetails {get; set;}
 
         public List<PlayerTournament> PlayerTournaments {get; set;} // Navigation Property. Tournament can have MANY PlayerTournaments
