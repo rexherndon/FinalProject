@@ -34,6 +34,40 @@
                 <input asp-for="Tournament.TournamentDetails" class="form-control" />
                 <span asp-validation-for="Tournament.TournamentDetails" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <table>
+                        <tr>
+                            @* loop through all Players and display them with a checkbox.
+                               If the tournament is in the Player, mark it as checked
+                            *@
+                            @{
+                                var check = "";
+                                int cnt = 0;
+                                foreach(var Player in Model.Players)
+                                {
+                                    if (cnt % 3 == 0)
+                                    {
+                                        @:</tr><tr>
+                                    }
+                                    check = "";
+                                    if (Model.Tournament.PlayerTournaments.Any(sc => sc.PlayerID == Player.PlayerID))
+                                    {
+                                        check = "checked";
+                                    }
+                                    <td>
+                                        <input type="checkbox" name="selectedPlayers" value="@Player.PlayerID" @check /> @Player.UserName
+                                    </td>
+                                    cnt++;
+                                }
+                                @:</tr>
+                            }
+                    </table>
+                </div>
+            </div>
+
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

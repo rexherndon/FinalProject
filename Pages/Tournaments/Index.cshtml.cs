@@ -22,7 +22,7 @@ namespace FinalProject.Pages.Tournaments
 
         public async Task OnGetAsync()
         {
-            Tournament = await _context.Tournament.ToListAsync();
+            Tournament = await _context.Tournament.Include(p => p.PlayerTournaments).ThenInclude(pt => pt.Player).ToListAsync();
         }
     }
 }

@@ -286,7 +286,7 @@ namespace FinalProject.Models
                 context.AddRange(Tournaments);
 
                 List<PlayerTournament> Enlisted = new List<PlayerTournament> {
-                    new PlayerTournament {Player = Players[0], Tournament = Tournaments[28]},
+                    new PlayerTournament {Player = Players[0], Tournament = Tournaments[27]},
                     new PlayerTournament {Player = Players[2], Tournament = Tournaments[16]},
                     new PlayerTournament {Player = Players[4], Tournament = Tournaments[8]},
                     new PlayerTournament {Player = Players[0], Tournament = Tournaments[4]},
@@ -296,8 +296,8 @@ namespace FinalProject.Models
                     new PlayerTournament {Player = Players[12], Tournament = Tournaments[6]},
                     new PlayerTournament {Player = Players[13], Tournament = Tournaments[6]},
 
-                    new PlayerTournament {Player = Players[2], Tournament = Tournaments[28]},
-                    new PlayerTournament {Player = Players[6], Tournament = Tournaments[28]},
+                    new PlayerTournament {Player = Players[2], Tournament = Tournaments[27]},
+                    new PlayerTournament {Player = Players[6], Tournament = Tournaments[27]},
                     new PlayerTournament {Player = Players[14], Tournament = Tournaments[4]},
                     new PlayerTournament {Player = Players[15], Tournament = Tournaments[11]},
                     new PlayerTournament {Player = Players[3], Tournament = Tournaments[11]},

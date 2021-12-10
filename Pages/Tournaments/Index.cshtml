@@ -5,10 +5,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Tournament Listings</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
+    <br>
+    <input type="text" placeholder="Search...">
 </p>
 <table class="table">
     <thead>
@@ -19,12 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Tournament[0].TournamentGame)
             </th>
-            <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Tournament[0].StartDate)
-            </th>
-            <th>
+            </th> *@
+            @* <th>
                 @Html.DisplayNameFor(model => model.Tournament[0].TournamentDetails)
-            </th>
+            </th> *@
             <th></th>
         </tr>
     </thead>
@@ -37,12 +39,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.TournamentGame)
             </td>
-            <td>
+            @* <td>
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TournamentDetails)
-            </td>
+            </td> *@
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.TournamentID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.TournamentID">Details</a> |
@@ -52,3 +54,23 @@
 }
     </tbody>
 </table>
+
+<nav aria-label="Page navigation utility">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
